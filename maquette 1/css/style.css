@@ -61,7 +61,6 @@ body
 .main
 {
    display: flex;
-   margin-top: 50px;
 }
 
 .main div:nth-of-type(1)
@@ -109,17 +108,21 @@ body
 
 @media(max-width: 992px)
 {
-    
-    .header
+    /* body{background-color: yellow;} */
+    .header 
     {
-        margin: 10px 0;
         height: 33px;
         overflow: hidden;
+        position: fixed;
+        top: -20px;
+        width: calc(100% - 120px);
     }
 
-    .header
+    .header ul
     {
+        background-color: white;
         position: relative;
+        top: 0;
     }
     
     .logo
@@ -160,12 +163,34 @@ body
 
     .main div:nth-of-type(2) img
     {
-        position: initial;
+        position: unset;
+        display: block;
+        margin: 0 auto;
         width: 70%;
     }
 }
 
-@media (min-width: 576px) 
+@media (max-width: 576px) 
 { 
-    
+    body{
+        padding: 0 40px;
+    }
+
+     .main div p:nth-of-type(1)
+    {
+        font-size: 2rem;
+        margin-top: 70px;
+    }
+
+    .main div p:nth-of-type(2)
+    {
+        font-size: 1rem;
+    }
+
+    .main div button
+    {
+        margin-top: 80px;
+        width: calc(100% - 160px);
+        text-align: center;
+    }
 }
